@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Auteur {
 
     public static final String INCONNU = "Inconnu";
-
+    private Pays pays;
     private String prenom = INCONNU;
     private String nom = INCONNU;
     private String paysOrigine = INCONNU;
@@ -23,9 +23,25 @@ public class Auteur {
         setPaysOrigine(paysOrigine);
     }
 
+    public Auteur(String prenom, String nom, Pays pays) {
+        this.pays = pays;
+        this.prenom = prenom;
+        this.nom = nom;
+
+    }
+
+    public Pays getPays() {
+        return pays;
+    }
+
+    public void setPays(Pays pays) {
+        this.pays = pays;
+    }
+
     public Auteur() {
         this(INCONNU, INCONNU, INCONNU);
     }
+
 
     public String getPrenom() {
         return prenom;
@@ -53,7 +69,7 @@ public class Auteur {
 
     @Override
     public String toString() {
-        return prenom + " " + nom + " (origine : " + paysOrigine + ")";
+        return prenom + " " + nom + " (origine : " + getPays()+  ")";
     }
 
     @Override

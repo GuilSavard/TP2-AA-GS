@@ -5,6 +5,7 @@ import java.util.List;
 
 import livres.Ouvrage;
 import livres.Auteur;
+import livres.Pays;
 
 /**
  * CoursPOO 1
@@ -18,10 +19,12 @@ public class TestOuvrage {
         TestOuvrage test = new TestOuvrage();
         test.testOuvrages();
         test.testTrouver();
+        test.test_Pays();
     }
 
 
     public void testOuvrages() {
+
         //Deux auteurs deja prets pour les tests...
         Auteur albertine = new Auteur("Albertine", "Tremblay", "Canada");
         Auteur john = new Auteur("John", "Smith", "Etats-Unis");
@@ -84,6 +87,7 @@ public class TestOuvrage {
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(john));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(null));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals("Test"));
+
     }
 
 
@@ -103,5 +107,18 @@ public class TestOuvrage {
     }
 
 
+    public void test_Pays() {
+//test_Sans_Erreur
+        Pays pays1 = new Pays("France", "FRA");
+        //Test_d erreur
+        Pays pays2 = new Pays("Canada", "Can");
+
+        Auteur albertine = new Auteur("Albertine", "Tremblay", pays1);
+        System.out.println(albertine);
+        Auteur john = new Auteur("John", "Smith", pays2);
+        System.out.println(john);
+
+
+    }
 }
 

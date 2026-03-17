@@ -40,4 +40,13 @@ public class Pays {
             System.out.println("Veuillez entrer 3 caractere en majuscule");
         }
     }
+
+
+    @Override
+    public String toString() {
+        return "Pays{" +
+                "nomPays='" + nomPays + '\'' +
+                ", codePays='" + codePays + '\'' +
+                '}';
+    }
 }
