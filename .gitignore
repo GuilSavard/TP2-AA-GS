@@ -1,3 +1,10 @@
+#Intelij
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+.idea/
+*.iml
+
 # Compiled class file
 *.class
 
