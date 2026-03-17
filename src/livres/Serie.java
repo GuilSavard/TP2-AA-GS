@@ -24,4 +24,11 @@ public class Serie {
     }
 
 
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "nomDeSerie='" + nomDeSerie + '\'' +
+                ", listeDouvrage=" + listeDouvrage +
+                '}';
+    }
 }

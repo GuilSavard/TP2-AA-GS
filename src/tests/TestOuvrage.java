@@ -1,10 +1,12 @@
 package tests;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import livres.Ouvrage;
 import livres.Auteur;
+import livres.Serie;
 
 /**
  * CoursPOO 1
@@ -84,6 +86,10 @@ public class TestOuvrage {
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(john));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals(null));
         System.out.println("Test de la méthode equals d'bibliotheque.Ouvrage:" + !livre4.equals("Test"));
+
+
+        System.out.println("\n-----Tests de la  méthode testSerie()-----------");
+        testSerie();
     }
 
 
@@ -102,6 +108,30 @@ public class TestOuvrage {
         System.out.println("Livres de Jacques: " + resultat);
     }
 
+
+    private void testSerie() {
+        Auteur john = new Auteur("John", "Smith", "Etats-Unis");
+        Ouvrage livreA = new Ouvrage("Titre assez long", john);
+
+        Ouvrage livreB = new Ouvrage("Titre me fait chier", john);
+
+        Ouvrage livreC = new Ouvrage("disparait dans des papillions", john);
+
+        Ouvrage livreD = new Ouvrage("La quete d'un oposssum", john);
+
+        ArrayList<Ouvrage> fuckThisShit = new ArrayList<Ouvrage>();
+        fuckThisShit.add(livreA);
+        fuckThisShit.add(livreB);
+        fuckThisShit.add(livreC);
+
+        Serie help= new Serie("helpMe", fuckThisShit);
+        help.addOuvrage(livreD);
+        System.out.println(help);
+        help.removeOuvrage(livreC);
+        System.out.println(help);
+
+
+    }
 
 }
 
