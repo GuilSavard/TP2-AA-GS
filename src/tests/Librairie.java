@@ -2,6 +2,8 @@ package tests;
 
 import livres.Auteur;
 import livres.Ouvrage;
+import livres.OuvrageAudio;
+import livres.OuvragePapier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,16 +20,16 @@ public class Librairie {
         auteurs.add(john);
         auteurs.add(jean);
 
-        ouvrages.add(new Ouvrage("Titre 1", john));
-        ouvrages.add(new Ouvrage("Titre 2", albertine));
-        ouvrages.add(new Ouvrage("Titre 3", john));
-        ouvrages.add(new Ouvrage("Titre 4", john));
-        ouvrages.add(new Ouvrage("Titre 5", albertine));
-        ouvrages.add(new Ouvrage("Titre 6", john));
-        ouvrages.add(new Ouvrage("Titre 7", john));
-        ouvrages.add(new Ouvrage("Titre 8", albertine,Ouvrage.Format.VIDEO));
-        ouvrages.add(new Ouvrage("Titre 9", john,Ouvrage.Format.AUDIO));
-        ouvrages.add(new Ouvrage("Titre 10", jean));
+        ouvrages.add(new OuvrageAudio("Titre 1", john, 1, OuvrageAudio.Format.Numerique));
+        ouvrages.add(new OuvragePapier("Titre 2", albertine, 340));
+        ouvrages.add(new OuvragePapier("Titre 3", john, 400));
+        ouvrages.add(new OuvragePapier("Titre 4", john, 700));
+        ouvrages.add(new OuvragePapier("Titre 5", albertine,600));
+        ouvrages.add(new OuvragePapier("Titre 6", john,231));
+        ouvrages.add(new OuvrageAudio("Titre 7", john, 20, OuvrageAudio.Format.Analogique));
+        ouvrages.add(new OuvrageAudio("Titre 8", albertine,30, OuvrageAudio.Format.Analogique));
+        ouvrages.add(new OuvragePapier("Titre 9", john,200));
+        ouvrages.add(new OuvragePapier("Titre 10", jean,200));
     }
 
     public List<Auteur> getAuteurs() {
