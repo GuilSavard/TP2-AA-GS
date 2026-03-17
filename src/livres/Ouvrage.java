@@ -10,7 +10,7 @@ import java.util.Objects;
  * @since H25
  */
 
-public class Ouvrage {
+public abstract class Ouvrage {
 
     public enum Format {
         PAPIER, AUDIO, VIDEO
@@ -27,21 +27,26 @@ public class Ouvrage {
     private int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
     private Format type = TYPE_DEFAULT;
 
-    public Ouvrage(String titre, Auteur auteur, Format type,
-                   LocalDate date, int nombreExemplaires) {
+    public Ouvrage(String titre, Auteur auteur
+            , int nombreExemplaires, LocalDate date) {
         setTitre(titre);
         setAuteur(auteur);
-        this.type = type;
         setDate(date);
         setNombreExemplaires(nombreExemplaires);
     }
-    public Ouvrage(String titre, Auteur auteur,Format type) {
-        this(titre, auteur, type, null, NOMBRE_EXEMPLAIRE_DEFAUT);
+
+    public Ouvrage(String titre, Auteur auteur,  LocalDate date ,int nombreExemplaires) {
+        this.titre = titre;
+        this.auteur = auteur;
+        this.date = date;
+        this.nombreExemplaires = nombreExemplaires;
+
     }
 
     public Ouvrage(String titre, Auteur auteur) {
-        this(titre, auteur, TYPE_DEFAULT, null, NOMBRE_EXEMPLAIRE_DEFAUT);
+        this(titre, auteur, NOMBRE_EXEMPLAIRE_DEFAUT,null);
     }
+
 
     public String getTitre() {
         return titre;
