@@ -1,3 +1,9 @@
+/**
+ * CoursPOO 1
+ *
+ * @author AA&&GS
+ * @since H25
+ */
 package livres;
 
 public class Pays {

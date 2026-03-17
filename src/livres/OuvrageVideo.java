@@ -11,7 +11,7 @@ public class OuvrageVideo extends Ouvrage {
     private int taille;
 
     public OuvrageVideo(String titre, Auteur auteur, int nombreExemplaires, LocalDate date) {
-        super(titre, auteur, nombreExemplaires, date);
+        super(titre, auteur, date ,nombreExemplaires);
         this.minutes=MINUTES_DEFAUT;
         this.taille=TAILLE_DEFAULT;
     }

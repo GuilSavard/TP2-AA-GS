@@ -10,7 +10,7 @@ import livres.*;
 /**
  * CoursPOO 1
  *
- * @author Julien.Brunet màj Jocelyn
+ * @author AA&&GS
  * @since H25
  */
 public class TestOuvrage {

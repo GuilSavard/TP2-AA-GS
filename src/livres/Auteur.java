@@ -1,11 +1,10 @@
 package livres;
 
 import java.util.Objects;
-
 /**
- * Cours POO 1
+ * CoursPOO 1
  *
- * @author Julien.Brunet maj dsadsadawds
+ * @author AA&&GS
  * @since H25
  */
 
