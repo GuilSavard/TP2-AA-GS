@@ -31,9 +31,10 @@ public class TestOuvrage {
 
         //Voici une partie des tests! Il faut en ajouter, pour les fonctionnalités non testées!
         System.out.println("-----Test des constructeurs d'ouvrage et des diverses validations-----------");
+
         Ouvrage livreA = new OuvrageAudio("Titre assez long", john, 266, OuvrageAudio.Format.Numerique);
         System.out.println(livreA);
-        Ouvrage livreB = new OuvragePapier("Ti", john, 231);
+        Ouvrage livreB = new OuvrageVideo("Ti", john);
         System.out.println(livreB);
         Ouvrage livreC = new OuvragePapier(null, john, 21361632);
         System.out.println(livreC);
@@ -42,7 +43,9 @@ public class TestOuvrage {
         Ouvrage livreA1 = new OuvrageAudio("Titre assez long", null, 2345, OuvrageAudio.Format.Numerique);
         System.out.println(livreA1);
         //bibliotheque.Auteur fonctionnel
-        Ouvrage livre1 = new OuvragePapier("Tout va bien", albertine,13);
+        Ouvrage livre1 = new OuvrageVideo("Tout va bien", albertine);
+
+
         System.out.println(livre1);
 
         //Date null et valeur par défaut de la date
@@ -60,7 +63,7 @@ public class TestOuvrage {
 
         System.out.println("\n-----Tests des méthodes acheter et vendre-----------");
 
-        Ouvrage livre3 = new OuvragePapier("Musique du hasard", new Auteur("Paul", "Auster", "Etats-Unis"),  LocalDate.now(), 5, 50);
+        Ouvrage livre3 = new OuvrageVideo("Musique du hasard", new Auteur("Paul", "Auster", "Etats-Unis"), LocalDate.now(), 5);
         System.out.println(livre3);
 
         livre3.acheter(5);
@@ -129,9 +132,12 @@ public class TestOuvrage {
 
     private void testSerie() {
         Auteur john = new Auteur("John", "Smith", "Etats-Unis");
+
         Ouvrage livreA = new OuvrageAudio("Titre assez long", john, 266, OuvrageAudio.Format.Numerique);
 
-        Ouvrage livreB = new OuvragePapier("Ti", john, 231);
+
+        Ouvrage livreB = new OuvrageVideo("Titre me fait chier", john);
+
 
         Ouvrage livreC = new OuvragePapier(null, john, 21361632);
 

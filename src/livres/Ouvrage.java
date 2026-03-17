@@ -34,9 +34,12 @@ public abstract class  Ouvrage {
         setNombreExemplaires(nombreExemplaires);
     }
 
+
     public Ouvrage(String titre, Auteur auteur) {
         this(titre, auteur, null, NOMBRE_EXEMPLAIRE_DEFAUT);
     }
+
+
 
     public String getTitre() {
         return titre;
