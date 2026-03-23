@@ -143,12 +143,12 @@ public class TestOuvrage {
 
         Ouvrage livreD = new OuvragePapier("La quete d'un oposssum", john, 312);
 
-        ArrayList<Ouvrage> fuckThisShit = new ArrayList<Ouvrage>();
-        fuckThisShit.add(livreA);
-        fuckThisShit.add(livreB);
-        fuckThisShit.add(livreC);
+        ArrayList<Ouvrage> desOuvrages = new ArrayList<Ouvrage>();
+        desOuvrages.add(livreA);
+        desOuvrages.add(livreB);
+        desOuvrages.add(livreC);
 
-        Serie help= new Serie("helpMe", fuckThisShit);
+        Serie help= new Serie("helpMe", desOuvrages);
         help.addOuvrage(livreD);
         System.out.println(help);
         help.removeOuvrage(livreC);
